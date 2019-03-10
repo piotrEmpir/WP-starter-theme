@@ -1,0 +1,25 @@
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+
+
+<header>
+	<div class="container">
+	<a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?=_e( 'Home Page', 'emp_wpst' ); ?>" /></a>
+
+	<?php
+		wp_nav_menu( array(
+		    'container'         => 'nav',
+		    'theme_location'    => 'primary'
+		) );
+	?>
+	</div>
+</header>
