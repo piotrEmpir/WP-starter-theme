@@ -1,0 +1,74 @@
+.wpcf7-form {
+    div {
+        position: relative;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 20px 10px;
+        margin-bottom: 15px;
+        @include place(#000);
+        color: #000;
+        font-size: 16px;
+        border: 1px solid #b5b5b5;
+        font-family: $font;
+        
+        &.wpcf7-not-valid{
+            border-color: red;
+        }
+        
+        &:hover,
+        &:focus,
+        &:active{
+            border-bottom-color: $color-primary;
+        }
+    }
+    label {
+        font-size: 13px;
+    }
+    textarea {
+        font-family: $font;
+        height: 120px;
+        line-height: 18px;
+    }
+    .wpcf7-form-control.wpcf7-submit {
+        margin: 0 auto;
+        padding: 0;
+        background: $color-primary2;
+        color: #fff;
+        width: 175px;
+        margin: 0 auto;
+        height: 50px;
+        display: block;
+        @include trans;
+        border: 0 none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: $font;
+        letter-spacing: 1px;
+        &:hover{
+            background: $color-primary;
+        }
+        
+    }
+    .legend {
+        font-size: 11px;
+    }
+    .wpcf7-not-valid-tip {
+        line-height: 15px;
+        font-size: 11px;
+        margin-top: -10px;
+    }
+    .wpcf7-response-output {
+        padding: 10px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+        padding: 15px;
+        .wpcf7-form-control.wpcf7-submit {
+            width: 160px;
+        }
+    }
+}

@@ -12,29 +12,50 @@ img{
 	height: auto;
 	width: auto;
 }
+ 
+$color-primary: #fa0000;
+$color-primary2: #6699fa; 
+$font: 'Verdana';
+/********************************
+
+XS 0 - 600
+SM 601 - 900
+MD 901 - 1200
+LG 1201 - 1800
+XL 1801 -
+
+********************************/
+$screen-xs-max: 600px;
+$screen-sm-min: ($screen-xs-max + 1); 
+$screen-sm-max: 900px; 
+
+//$screen-md-min: ($screen-sm-max + 1); 
+//$screen-md-max: 1200px; 
+
+$screen-md-min: ($screen-sm-max + 1); 
+$screen-md-max: 1200px; 
+$screen-lg-min: ($screen-md-max + 1); 
+$screen-lg-max: 1800px; 
+$screen-xl-min: ($screen-lg-max + 1); 
+ 
+ 
 
 
-body{
-	background:#fff;
-	font-family: Verdana;
-	color: #333;
-	font-size: 14px;
+ 
+body{ 
+	font-family: $font; 
+	color: #000;
+	font-size: 18px; 
 }
-header .container{
-	justify-content: space-between;
-}
-.container{
-	max-width: 1600px;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-}
-main{
-	background:#fafafa;
-	flex: 0 0 67%;
-}
-.sidebar{
-	flex: 0 0 33%;
-	margin-left: 30px;
-	overflow: hidden;
-}
+
+
+@import 'reset';
+@import 'mixins';
+@import 'common';
+@import 'header';
+@import 'menu';
+@import 'footer';
+@import 'main_slider';
+@import 'pagination';
+@import 'contact_form_7';
+

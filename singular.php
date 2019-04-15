@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="container"><main>
+<section class="container">
 	<?php
 	if ( have_posts() ) :
 	    while ( have_posts() ) : the_post();
 	    ?>
 
-	        <article>
+	        <article id="post-<?php the_ID();?>" <?php post_class('single_post') ?>>
 	        	<h1><?php the_title(); ?></h1>
 
 				<?php
@@ -34,8 +34,10 @@
 	    _e( 'Sorry, no posts matched your criteria.', 'emp_wpst' );
 	endif;
 	?>
-	</main>
 
 
-	<?php get_sidebar(); ?></div>
+	<?php get_sidebar(); ?>
+
+</section>
+
 <?php get_footer(); ?>

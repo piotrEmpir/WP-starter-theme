@@ -1,0 +1,23 @@
+.wp-pagenavi{
+    padding: 10px 0 6px;
+    text-align: center;
+    
+    span, a{
+        display: inline-block;
+        line-height: 30px;
+        min-width: 30px;
+        padding: 0 5px;
+        background: #f5f5f5;
+        margin: 0 2px 4px;
+        @include trans;
+        text-decoration: none;
+    }
+    .current{
+        background: $color-primary;
+        color: #fff;
+    }
+    a:hover{
+        color: #fff;
+        background: $color-primary2;
+    }
+}

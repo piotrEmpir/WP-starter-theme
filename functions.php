@@ -51,11 +51,13 @@ add_action( 'after_setup_theme', 'theme_inti' );
 
 function add_theme_scripts() {
     //wp_enqueue_style( $handle, $src, $deps, $ver, $media );
+    wp_enqueue_style( 'owl', get_template_directory_uri() . '/css/owl.carousel.min.css',false,'1.0','all');
     wp_enqueue_style( 'theme', get_template_directory_uri() . '/css/theme.css',false,'1.0','all');
 
     //wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer);
     //wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
-    wp_enqueue_script( 'theme', get_template_directory_uri() . '/js/theme.js', false, 1.0, true);
+    wp_enqueue_script( 'owl.carousel.min', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '1.0', true );
+    wp_enqueue_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('jquery'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 

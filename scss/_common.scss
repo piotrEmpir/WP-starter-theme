@@ -1,0 +1,33 @@
+.oh {
+    overflow: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.6em;
+    
+    p{
+        margin-bottom: 1em;
+    }
+    ul, ol{
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin-bottom: 1em;
+    }
+    hr{
+        margin: 1em 0;
+    }
+    a{
+        color: $color-primary2;
+    }
+}
