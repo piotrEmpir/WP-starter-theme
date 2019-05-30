@@ -83,6 +83,11 @@ a {
   .content a {
     color: #6699fa; }
 
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
 .wp-pagenavi {
   padding: 10px 0 6px;
   text-align: center; }
