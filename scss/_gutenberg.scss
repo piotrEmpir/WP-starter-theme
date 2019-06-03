@@ -1,0 +1,24 @@
+
+.wp-block-image.alignfull{
+    padding: 10px 0;
+    background: red;
+    position: relative;
+
+    img{
+        position: relative;
+        left: 50%;
+        width: 100vw;
+        max-width: 100vw;
+        transform: translateX(-50%);
+    }
+}
+
+.wp-block-image.alignwide{
+    padding: 10px 0;
+    margin: 0 -4vw;
+    background: green;
+    max-width: 200vw;
+    img{
+        width: 100%;
+    }
+}

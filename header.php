@@ -9,9 +9,9 @@
 
 <body <?php body_class(); ?>>
 
+<div class="oh">
 
-
-<header>
+<header class="header">
 	<div class="container">
 	<a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?=_e( 'Home Page', 'emp_wpst' ); ?>" /></a>
 
@@ -21,5 +21,23 @@
 		    'theme_location'    => 'primary'
 		) );
 	?>
+
+
+	<button class="menu-toggle">
+		Menu
+	</button>
+
 	</div>
 </header>
+
+<div class="offscreen-menu">
+    <div class="close">Close</div>
+    <nav class="main_menu">
+        <?php
+			wp_nav_menu( array(
+			    'container'         => 'nav',
+			    'theme_location'    => 'primary'
+			) );
+		?>
+    </nav>
+</div>

@@ -1,21 +1,30 @@
-*{
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-::-moz-selection{color:#fff; background:#000}
-::selection{color:#fff;background:#000;}
 
-
-img{
-	max-width: 100%;
-	height: auto;
-	width: auto;
+::-moz-selection {
+    color: #fff;
+    background: #000
 }
 
-$color-primary: #fa0000;
+::selection {
+    color: #fff;
+    background: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+$color-primary: #05ccff;
 $color-primary2: #6699fa;
-$font: 'Verdana';
+$font: 'OPen Sans';
+
 /********************************
 
 XS 0 - 600
@@ -25,6 +34,7 @@ LG 1201 - 1800
 XL 1801 -
 
 ********************************/
+
 $screen-xs-max: 600px;
 $screen-sm-min: ($screen-xs-max + 1);
 $screen-sm-max: 900px;
@@ -33,17 +43,11 @@ $screen-md-max: 1200px;
 $screen-lg-min: ($screen-md-max + 1);
 $screen-lg-max: 1800px;
 $screen-xl-min: ($screen-lg-max + 1);
-
-
-
-
-
-body{
-	font-family: $font;
-	color: #000;
-	font-size: 18px;
+body {
+    font-family: $font;
+    color: #000;
+    font-size: 16px;
 }
-
 
 @import 'reset';
 @import 'mixins';
@@ -54,4 +58,6 @@ body{
 @import 'main_slider';
 @import 'pagination';
 @import 'contact_form_7';
-
+@import 'sidebar';
+@import 'content';
+@import 'gutenberg';

@@ -13,11 +13,11 @@
         text-decoration: none;
     }
     .current{
-        background: $color-primary;
+        background: darken($color-primary, 10%);
         color: #fff;
     }
     a:hover{
         color: #fff;
-        background: $color-primary2;
+        background: darken($color-primary, 10%);
     }
 }

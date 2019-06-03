@@ -1,0 +1,15 @@
+.articles-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -10px; }
+  .articles-grid .item {
+    padding: 10px;
+    -ms-flex-preferred-size: 33.3%;
+    flex-basis: 33.3%; }
+  .articles-grid img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; }

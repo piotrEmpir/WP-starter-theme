@@ -1,5 +1,7 @@
 <?php
 
+include 'gutenberg-blocks/blocks.php';
+
 if ( ! function_exists( 'theme_inti' ) ) :
 
 function theme_inti() {
