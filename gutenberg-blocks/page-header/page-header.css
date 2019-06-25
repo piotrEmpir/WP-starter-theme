@@ -18,8 +18,8 @@
 .page-header.alignfull .inner {
   position: relative;
   left: 50%;
-  width: 100vw;
-  max-width: 100vw;
+  width: 101vw;
+  max-width: 101vw;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }

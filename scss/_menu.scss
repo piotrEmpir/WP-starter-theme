@@ -12,16 +12,47 @@ $change-menu-resolution: $screen-sm-max ;
     }
     a{
         display: inline-block;
-        padding: 10px;
+        padding: $gap;
         color: #000;
         @include trans;
-        &:hover{
-            background: $color-primary;
-            color: #fff;
-            text-decoration: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    li > a:hover,
+    li.current-menu-parent > a,
+    li.curent-menu-item > a{
+        
+        //background: $color-primary;
+        //color: #fff;
+        color: $color-primary;
+        text-decoration: none;
+        
+    }
+    
+    li ul{
+        top: $gap*4;
+        position: absolute;
+        min-width: 250px;
+        transform: translateY(-20px);
+        opacity: 0;
+        display: block;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        background: #fff;
+        
+        li{
+            display: block;
         }
     }
     
+    li:hover > ul{
+        transform: translate(0,0);
+        opacity: 1;
+        display: block;
+    }
     
     @media screen and (max-width: $change-menu-resolution){
         display: none;
@@ -52,7 +83,7 @@ $change-menu-resolution: $screen-sm-max ;
 
 
 
-$offscreen-menu-width: 400px;
+$offscreen-menu-width: 440px;
 
 .offscreen-menu{
     position: fixed;
@@ -60,20 +91,99 @@ $offscreen-menu-width: 400px;
     height: 100vh;
     overflow: auto;
     background: $color-primary;
-    width: $offscreen-menu-width;
-    padding: 40px;
-    transform: translateX($offscreen-menu-width);
+    padding: 50px 50px;
     @include trans;
     z-index: 999;
     right: 0;
-    ul{
-        list-style: none;
+    transform: translateX(100vw);
+    width: 100vw;
+    
+    @media screen and (min-width: $offscreen-menu-width + 20){
+        transform: translateX($offscreen-menu-width);
+        width: $offscreen-menu-width;    
     }
+    
+    .close{
+        position: absolute;
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 20px;
+        transform: rotate(45deg);
+        cursor: pointer;
+        &:after,
+        &:before{
+            position: absolute;
+            background: #fff;
+            content: '';
+            width: 30px;
+            height: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+        }
+        &:after{
+            width: 3px;
+            height: 30px;
+        }
+    }
+    
+    li{
+        list-style: none;
+        position: relative;
+    }
+    
+    .sub_toggle{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg);
+        cursor: pointer;
+        @include trans;
+        &:after,
+        &:before{
+            position: absolute;
+            background: #fff;
+            content: '';
+            width: 3px;
+            height: 15px;
+            top: 7px;
+            left: 19px;
+        }
+        &:after{
+            top: 19px;    
+            left: 7px;
+            width: 15px;
+            height: 3px;
+        }
+        
+    }
+    li.act .sub_toggle{
+        transform: rotate(-135deg);
+    }
+    
     a{
         color: #fff;
         font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5px 0;
+        display: block;
+        @include trans;
+        &:hover{
+            //transform: translateX(20px);
+            padding-left: 20px;
+        }
     }
     
+    ul ul{
+        display: none;
+        margin-left: 30px;
+    }
     
     &.active{
         transform: translateX(0);

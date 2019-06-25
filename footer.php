@@ -1,4 +1,4 @@
-	<footer>
+	<footer class="footer">
     	<div class="container">
       		<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
     	</div>

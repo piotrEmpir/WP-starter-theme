@@ -23,29 +23,35 @@ img {
 
 $color-primary: #05ccff;
 $color-primary2: #6699fa;
-$font: 'OPen Sans';
+$font: 'Open Sans';
+
+$gap: 10px;
 
 /********************************
 
-XS 0 - 600
-SM 601 - 900
-MD 901 - 1200
-LG 1201 - 1800
-XL 1801 -
+XS 0 - 400
+SM 600 - 760
+MD 761 - 990
+LG 991 - 1200
+XL 1201 -
 
 ********************************/
 
-$screen-xs-max: 600px;
+$screen-xxs-max: 400px;
+$screen-xs-min: ($screen-xxs-max + 1);
+$screen-xs-max: 599px;
 $screen-sm-min: ($screen-xs-max + 1);
-$screen-sm-max: 900px;
+$screen-sm-max: 760px;
 $screen-md-min: ($screen-sm-max + 1);
-$screen-md-max: 1200px;
+$screen-md-max: 990px;
 $screen-lg-min: ($screen-md-max + 1);
-$screen-lg-max: 1800px;
+$screen-lg-max: 1200px;
 $screen-xl-min: ($screen-lg-max + 1);
+$screen-xl-max: 1400px;
+
 body {
     font-family: $font;
-    color: #000;
+    color: #444;
     font-size: 16px;
 }
 

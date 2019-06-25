@@ -79,7 +79,18 @@ jQuery(document).ready(function($) {
       $(this).toggleClass('active');
       $('.offscreen-menu').toggleClass('active');
 
-   })
+   });
+
+
+    $('.offscreen-menu .menu-item-has-children > a').each(function() {
+      $(this).after('<div class="sub_toggle"><i class=""></i></div>');
+    });
+
+    $('.sub_toggle').on("click", function(event) {
+      event.preventDefault();
+      $(this).parent().toggleClass('act');
+      $(this).next().slideToggle();
+    });
 
 
 

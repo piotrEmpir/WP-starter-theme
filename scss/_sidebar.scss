@@ -1,15 +1,14 @@
 .sidebar{
-    flex: 0 0 0 ;
-    flex-basis: 33%;
-    padding-left: 20px;
-    
+    margin-bottom: $gap*2;
+    @media screen and (min-width: $screen-md-min){
+        flex-basis: 33%;
+        padding-left: $gap*2;
+    }
+     
     h3{
         border-bottom: 1px solid #eee;
     }
     
-    select{
-        max-width: 300px;
-    }
     
     ul{
         margin: 0 0 1em 1em;

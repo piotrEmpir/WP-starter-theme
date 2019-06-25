@@ -18,22 +18,115 @@ img{
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 1380px;
     padding: 0 10px;
     margin: 0 auto;
-    &.cols{
-        display: flex;
+    @media screen and (min-width: $screen-md-min){
+        &.cols{
+            display: flex;
+        }
     }
+    @media screen and (max-width: $screen-xl-max){
+        max-width: 1180px;
+        //background: red;
+    }
+    @media screen and (max-width: $screen-lg-max){
+        max-width: 990px;
+        //background: blue;
+    }
+    @media screen and (max-width: $screen-md-max){
+        max-width: 760px;
+        //background: green;
+    }
+    @media screen and (max-width: $screen-sm-max){
+        max-width: 600px;
+        //background: pink;
+    }
+    @media screen and (max-width: $screen-xs-max){
+        max-width: 400px;
+        //background: purple;
+    }
+    @media screen and (max-width: $screen-xxs-max){
+        max-width: 100%;
+        //background: #fff;
+    } 
+}
+ 
+
+.indicator{
+    position: fixed;
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
+    div{
+        display: none;
+    }
+    @media screen and (min-width: 1401px){
+        background: yellow;
+        div.xxl{
+            color: #000;
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+        background: red;
+        div.xl{
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: $screen-lg-max) and (min-width: $screen-lg-min) {
+        background: blue;
+        div.lg{
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
+        background: green;
+        div.md{
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+        background: pink;
+        div.sm{
+            display: inline-block;
+            color: #000;
+        }
+    }
+    @media screen and (max-width: $screen-xs-max) and (min-width: $screen-xs-min)  {
+        background: purple;
+        div.xs{
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: $screen-xxs-max){
+        background: #fff;
+        div.xxs{
+            display: inline-block;
+            color: #000;
+        }
+    } 
 }
 
-
-.main-content{
+.main{
     main,
     >article{
-        flex: 2 auto;
-    }
-    
-    article.post{
-        margin-bottom: 2em;
+        margin-bottom: $gap*2;
+        @media screen and (min-width: $screen-md-min){
+            padding-right: $gap*2;
+        }
     }
 }
+
+
+
+h1, h2, h3, h4, h5, h6{
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+h1{ font-size: 2em; }
+h2{ font-size: 1.8em; }
+h3{ font-size: 1.6em; }
+h4{ font-size: 1.4em; }
+h5{ font-size: 1.2em; }
+h6{ font-size: 2em; }

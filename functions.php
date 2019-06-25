@@ -114,3 +114,16 @@ function author_page_redirect() {
 }
 
 add_action( 'template_redirect', 'author_page_redirect' );
+
+
+function filter_acf_the_content( $value ) {
+if ( class_exists( 'iworks_orphan' )) {
+$orphan = new iworks_orphan();
+$value = $orphan->replace( $value );
+}
+
+return $value;
+};
+
+// add the filter
+add_filter( 'acf_the_content', 'filter_acf_the_content', 10, 1 );

@@ -1,5 +1,8 @@
 .header {
-    padding: 20px 0;
+    padding: $gap*3 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: $gap*3;
+    
     .container{
         display: flex;
         align-items: center;

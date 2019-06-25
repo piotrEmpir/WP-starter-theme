@@ -9,6 +9,16 @@
 
 <body <?php body_class(); ?>>
 
+<div class="indicator">
+	<div class="xxl">xxl 1380</div>
+	<div class="xl">xl 1180</div>
+	<div class="lg">lg 990</div>
+	<div class="md">md 760</div>
+	<div class="sm">sm 600</div>
+	<div class="xs">xs 400</div>
+	<div class="xxs">xxs 100%</div>
+</div>
+
 <div class="oh">
 
 <header class="header">
@@ -24,7 +34,8 @@
 
 
 	<button class="menu-toggle">
-		Menu
+		<span class="label">Menu</span>
+		<span class="ico"><i></i></span>
 	</button>
 
 	</div>
